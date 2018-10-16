@@ -11,7 +11,7 @@ namespace ISAD251.Models
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Order_Number { get; set; }
-        DateTime Order_Date { get; set; }
+        public DateTime Order_Date { get; set; }
         public virtual ICollection<Order_Lines>Order_Lines { get; set; }
 
         public Orders()

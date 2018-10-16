@@ -10,14 +10,9 @@ namespace ISAD251.Controllers
     {
         public ActionResult Index()
         {
-            Models.Products p = new Models.Products();
-            p.Product_Code = "SOFT549";
-            p.Product_Name = "Book";
-
+            
             using (var db = new Models.ProductDB())
-            {
-                db.products.Add(p);
-                db.SaveChanges();
+            {                
                 ViewBag.Message = "The number of products so far is " + db.products.Count().ToString();
             }
 

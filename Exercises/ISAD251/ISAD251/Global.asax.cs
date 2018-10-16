@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using ISAD251.Models;
 
 namespace ISAD251
 {
@@ -16,6 +18,12 @@ namespace ISAD251
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer<ProductDB>(new ProductDBInitialiser());
+            using (ProductDB context = new ProductDB())
+            {
+                context.Database.Initialize(false);
+            }
         }
     }
 }

@@ -160,6 +160,7 @@
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Order_Lines.cs" />
     <Compile Include="Models\ProductDB.cs" />
+    <Compile Include="Models\ProductDBInitialiser.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

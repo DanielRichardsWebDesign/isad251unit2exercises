@@ -17,7 +17,7 @@ namespace ISAD251.Models
 
         public Order_Lines()
         {
-
+            
         }
     }
 }
